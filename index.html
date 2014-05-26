@@ -1,0 +1,180 @@
+<html>
+	<head>
+		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
+		<script src="http://code.jquery.com/jquery-latest.min.js"
+        type="text/javascript"></script>
+		<script type="text/javascript" src="./js/jquery.panelSnap.js"></script>
+		<style type="text/css">
+			a {
+				text-decoration: none;
+				color: inherit;
+			}
+			html, body {
+				margin: 0px;
+				padding: 0px;
+				font-family: 'Lato', sans-serif;
+			}
+			body {
+				height: 100%;
+			}
+			.full {
+				width: 100%;
+				height: 100%;
+				background-position: center;
+				background-size: 100% auto;			
+			}
+			.banner {
+				background-image: url("./img/banner.jpg");	
+			}
+			.join {
+				background-image: url("./img/banner2.jpg");
+			}
+			.full .content {
+				position: relative;
+				top: 50%;
+				transform: translateY(-50%);
+				-webkit-transform: translateY(-50%);
+				-o-transform: translateY(-50%);
+				-moz-transform: translateY(-50%);
+				margin: auto;
+			}
+			.banner .content {
+				height: 400px;
+				width: 800px;
+				color: white;
+				text-align: center;
+				/*background-color: rgba(255,255,255,0.1);*/
+			}
+			.banner h1 {
+				font-weight: 300;
+				font-size: 80px;
+				margin-bottom: 30px;
+			}
+			.banner p {
+				font-weight: 100;
+				font-size: 38px;
+				margin: 0px;
+			}
+			.banner .book {
+				text-transform: uppercase;
+				border: 3px solid white;
+				height: 40px;
+				width: 180px;
+				margin: auto;
+				margin-top: 50px;
+				cursor: pointer;
+			}
+			.banner .book:hover {
+				background: white;
+			}
+			.banner .book p {
+				font-size: 20px;
+				font-weight: 700;
+				letter-spacing: 2px;
+				margin: 8px 0px;
+				cursor: pointer;
+			}
+			.banner .book:hover p {
+				color: black;
+			}
+			.join {
+				background-color: #222;
+				color: white;
+			}
+			.join .content {
+				text-align: center;
+			}
+			.row {
+				margin: auto;
+			}
+			.row .unit {
+				display: inline-block;
+				max-width: 50%;
+			}
+			.join h1 {
+				font-weight: 100;
+				font-size: 30px;
+			}
+			.join p {
+				font-weight: 100;
+				font-size: 20px;
+				letter-spacing: 1px;
+			}
+			.mapinfo {
+				text-align: left;
+				width: 400px;
+				padding-left: 20px;
+				vertical-align: top;
+			}
+		</style>
+	</head>
+	<body>
+		<section>
+			<div id="banner" class="banner full">
+				<div class="content">
+					<h1>
+						Welcome to DVC
+					</h1>
+					<p>
+						We are UCSD&rsquo;s premier DJ and music event organization. Talk to us today about how we can help you make your next event a success.
+					</p>
+
+					<a href="#join">
+						<div class="book">
+							<p>BOOKING</p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div id="join" class="join full">
+				<div class="content">
+					<div class="row">
+						<div class="unit">
+							<img src="./img/map.png" />
+						</div>
+						<div class="unit mapinfo">
+							<h1>
+								We meet Wednesdays at 8PM
+							</h1>
+							<p>
+								Our office is located in the old Student Center on the second floor in room F201. If coming from Library walk, go past Porter's Pub, pass the bike racks, and then take your first left and go up the stairs. We are the first room on the left.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<script type="text/javascript">
+			var bannerRatio = 2048 / 1236;
+			var windowRatio = window.innerWidth / window.innerHeight;
+
+			if(bannerRatio > windowRatio) {
+				var banner1 = document.getElementById("banner");
+				var banner2 = document.getElementById("join");
+				banner1.style.backgroundSize = "auto 100%";
+				banner2.style.backgroundSize = "auto 100%";
+			}
+
+			$(function() {
+			  $('a[href*=#]:not([href=#])').click(function() {
+			    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			      var target = $(this.hash);
+			      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			      if (target.length) {
+			        $('html,body').animate({
+			          scrollTop: target.offset().top
+			        }, 1000);
+			        return false;
+			      }
+			    }
+			  });
+			});
+
+			$('body').panelSnap();
+
+		</script>
+	</body>
+</html>
