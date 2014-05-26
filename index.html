@@ -222,6 +222,9 @@
 			/*.fotorama__stage__frame {
 				margin-right: -4px;
 			}*/
+			.bolder {
+				font-weight: 300 !important;
+			}
 		</style>
 	</head>
 	<body>
@@ -351,7 +354,12 @@
 			});
 
 			if(window.innerWidth > window.innerHeight) {
-				$('body').panelSnap();	
+				$('body').panelSnap();
+			}
+			else {					
+				$( ".content p" ).each(function() {
+					$( this ).toggleClass( "bolder" );
+				});
 			}
 			
 		</script>
