@@ -3,6 +3,8 @@
 		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
 		<script src="http://code.jquery.com/jquery-latest.min.js"
         type="text/javascript"></script>
+        <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.5.1/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.5.1/fotorama.js"></script> <!-- 16 KB -->
 		<script type="text/javascript" src="./js/jquery.panelSnap.js"></script>
 		<style type="text/css">
 			a {
@@ -40,7 +42,7 @@
 			}
 			.banner .content {
 				height: 400px;
-				width: 800px;
+				max-width: 800px;
 				color: white;
 				text-align: center;
 				/*background-color: rgba(255,255,255,0.1);*/
@@ -91,6 +93,15 @@
 				display: inline-block;
 				max-width: 50%;
 			}
+			@media screen and (max-width: 900px) {
+				.join {
+					padding-top: 30px;
+				}
+				.join .row .unit {
+					margin: auto;
+					display: block;
+				}
+			}
 			.join h1 {
 				font-weight: 100;
 				font-size: 30px;
@@ -106,9 +117,175 @@
 				padding-left: 20px;
 				vertical-align: top;
 			}
+			.nav {
+				position: fixed;
+				color: white;
+				padding: 30px 0px;
+				text-align: center;
+				font-weight: 300;
+				width: 100%;
+				background: rgba(0,0,0,0.5);
+				z-index: 1000;
+			}
+			.nav .link {
+				display: inline-block;
+				text-transform: uppercase;
+				padding: 0px 20px;
+			}
+
+			#wrapper {
+				background-color: #fff;
+				width: 100%;
+				height: 400px;
+				/*margin-top: -225px;*/
+				overflow: hidden;
+				/*position: absolute;*/
+				top: 50%;
+				left: 0;
+			}
+			#carousel img {
+				display: block;
+				float: left;
+			}
+			#prev, #next {
+				background-color: rgba(255, 255, 255, 0.7);
+				display: block;
+				height: 400px;
+				width: 50%;
+				top: 0;
+				position: absolute;
+			}
+			#prev:hover, #next:hover {
+				background-color: #fff;
+				background-color: rgba(255, 255, 255, 0.8);
+			}
+			#prev {
+				left: -495px;
+			}
+			#next {
+				right: -495px;
+			}
+			#pager {
+				position: absolute;
+				bottom: 10px;
+				width: 100%;
+				text-align: center;
+			}
+			#pager a {
+				border: 2px solid #fff;
+				border-radius: 10px;
+				display: inline-block;
+				width: 10px;
+				height: 10px;
+				margin: 0 5px 0 0;
+			}
+			#pager a:hover {
+				background-color: rgba(255, 255, 255, 0.5);
+			}
+			#pager a span {
+				display: none;
+			}
+			#pager a.selected {
+				background-color: #fff;
+			}
+			.fotorama__nav-wrap {
+				position: relative;
+				top: -80px;
+			}
+			.fotorama__nav__shaft {
+				opacity: 0.5;
+				transition: opacity 0.15s linear !important;
+				-webkit-transition: opacity 0.15s linear !important;
+				-o-transition: opacity 0.15s linear !important;
+				-moz-transition: opacity 0.15s linear !important;
+			}
+			.fotorama__nav__shaft:hover {
+				opacity: 1;
+			}
+			.fotorama__html .info {
+				padding: 100px 80px;
+				height: 100%;
+				background: rgba(0,0,0,0.2);
+			}
+			.fotorama__html .info .title {
+				color: white;
+				font-size: 60px;
+				text-transform: uppercase;
+				font-weight: 100;
+			}
+			.fotorama__stage__shaft {
+				margin: 0px -2px;
+			}
+			.fotorama__stage {
+				height: 100% !important;
+			}
+			/*.fotorama__stage__frame {
+				margin-right: -4px;
+			}*/
 		</style>
 	</head>
 	<body>
+		<div class="nav">
+			<div class="link">
+				events
+			</div>
+			<div class="link">
+				booking
+			</div>
+			<div class="link">
+				calendar
+			</div>
+			<div class="link">
+				media
+			</div>
+			<div class="link">
+				artists
+			</div>
+			<div class="link">
+				about
+			</div>
+		</div>
+		<section style="margin-bottom:-68px;">
+			<div class="full" style="background:#161616">
+				<!--div id="wrapper" class="content">
+					<div id="carousel">
+						<img src="img/building1.jpg" alt="building1" width="990" height="400" />
+						<img src="img/building2.jpg" alt="building2" width="990" height="400" />
+						<img src="img/building3.jpg" alt="building3" width="990" height="400" />
+						<img src="img/building4.jpg" alt="building4" width="990" height="400" />
+						<img src="img/building5.jpg" alt="building5" width="990" height="400" />
+						<img src="img/building6.jpg" alt="building6" width="990" height="400" />
+					</div>
+					<a href="#" id="prev" title="Show previous"> </a>
+					<a href="#" id="next" title="Show next"> </a>
+					<div id="pager"></div>
+				</div-->
+				<div class="fotorama content" data-arrows="false" data-loop="true" data-nav="thumbs" data-width="100%" data-height="100%" data-autoplay="true" data-fit="cover" style="height:100%" data-thumbwidth="100">
+					<img src="img/building1.jpg" alt="building1" width="990" height="400" />
+					<div data-img="img/building2.jpg" data-thumb="img/building2.jpg" data-thumbratio="2">
+						<div class="info">
+							<div class="title">
+								let's bounce 2014
+							</div>
+						</div>
+					</div>
+					<div data-img="img/building4.jpg" data-thumb="img/building4.jpg" data-thumbratio="2">
+						<div class="info">
+							<div class="title">
+								something awesome 2013
+							</div>
+						</div>
+					</div>
+					<div data-img="img/building3.jpg" data-thumb="img/building3.jpg" data-thumbratio="2">
+						<div class="info">
+							<div class="title">
+								something nasty 2014
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 		<section>
 			<div id="banner" class="banner full">
 				<div class="content">
