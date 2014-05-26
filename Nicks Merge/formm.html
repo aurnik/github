@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Book Us</title>
+<link rel="stylesheet" type="text/css" href="css/view.css" media="all">
+<script type="text/javascript" src="js/view.js"></script>
+<script type="text/javascript" src="js/calendar.js"></script>
+</head>
+<body id="main_body" >
+	
+	<img id="top" src="top.png" alt="">
+	<div id="form_container">
+	
+		<h1><a>Book Us</a></h1>
+		<form id="form_850018" class="appnitro"  method="post" action="">			
+			<ul >
+			
+					<li id="li_1" >
+		<label class="description" for="element_1">Name* </label>
+		<span>
+			<input id="element_1_1" name= "element_1_1" class="element text" maxlength="255" size="8" value=""/>
+			<label>First</label>
+		</span>
+		<span>
+			<input id="element_1_2" name= "element_1_2" class="element text" maxlength="255" size="14" value=""/>
+			<label>Last</label>
+		</span> 
+		</li>		<li id="li_2" >
+		<label class="description" for="element_2">Email* </label>
+		<div>
+			<input id="element_2" name="element_2" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_3" >
+		<label class="description" for="element_3">Number </label>
+		<div>
+			<input id="element_3" name="element_3" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div><p class="guidelines" id="guide_3"><small>760-717-0000</small></p> 
+		</li>		<li id="li_4" >
+		<label class="description" for="element_4">Organization </label>
+		<div>
+			<input id="element_4" name="element_4" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_5" >
+		<label class="description" for="element_5">Event Name* </label>
+		<div>
+			<input id="element_5" name="element_5" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div><p class="guidelines" id="guide_5"><small>i.e. Winter Formal
+</small></p> 
+		</li>		<li id="li_6" >
+		<label class="description" for="element_6">Event Date* </label>
+		<span>
+			<input id="element_6_1" name="element_6_1" class="element text" size="2" maxlength="2" value="" type="text"> /
+			<label for="element_6_1">MM</label>
+		</span>
+		<span>
+			<input id="element_6_2" name="element_6_2" class="element text" size="2" maxlength="2" value="" type="text"> /
+			<label for="element_6_2">DD</label>
+		</span>
+		<span>
+	 		<input id="element_6_3" name="element_6_3" class="element text" size="4" maxlength="4" value="" type="text">
+			<label for="element_6_3">YYYY</label>
+		</span>
+	
+		<span id="calendar_6">
+			<img id="cal_img_6" class="datepicker" src="calendar.gif" alt="Pick a date.">	
+		</span>
+		<script type="text/javascript">
+			Calendar.setup({
+			inputField	 : "element_6_3",
+			baseField    : "element_6",
+			displayArea  : "calendar_6",
+			button		 : "cal_img_6",
+			ifFormat	 : "%B %e, %Y",
+			onSelect	 : selectDate
+			});
+		</script>
+		 
+		</li>		<li id="li_7" >
+		<label class="description" for="element_7">Start Time </label>
+		<span>
+			<input id="element_7_1" name="element_7_1" class="element text " size="2" type="text" maxlength="2" value=""/> : 
+			<label>HH</label>
+		</span>
+		<span>
+			<input id="element_7_2" name="element_7_2" class="element text " size="2" type="text" maxlength="2" value=""/> : 
+			<label>MM</label>
+		</span>
+		<span>
+			<input id="element_7_3" name="element_7_3" class="element text " size="2" type="text" maxlength="2" value=""/>
+			<label>SS</label>
+		</span>
+		<span>
+			<select class="element select" style="width:4em" id="element_7_4" name="element_7_4">
+				<option value="AM" >AM</option>
+				<option value="PM" >PM</option>
+			</select>
+			<label>AM/PM</label>
+		</span> 
+		</li>		<li id="li_8" >
+		<label class="description" for="element_8">End Time </label>
+		<span>
+			<input id="element_8_1" name="element_8_1" class="element text " size="2" type="text" maxlength="2" value=""/> : 
+			<label>HH</label>
+		</span>
+		<span>
+			<input id="element_8_2" name="element_8_2" class="element text " size="2" type="text" maxlength="2" value=""/> : 
+			<label>MM</label>
+		</span>
+		<span>
+			<input id="element_8_3" name="element_8_3" class="element text " size="2" type="text" maxlength="2" value=""/>
+			<label>SS</label>
+		</span>
+		<span>
+			<select class="element select" style="width:4em" id="element_8_4" name="element_8_4">
+				<option value="AM" >AM</option>
+				<option value="PM" >PM</option>
+			</select>
+			<label>AM/PM</label>
+		</span> 
+		</li>		<li id="li_9" >
+		<label class="description" for="element_9">Venue* </label>
+		<div>
+			<input id="element_9" name="element_9" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div><p class="guidelines" id="guide_9"><small>i.e. Price Center</small></p> 
+		</li>		<li id="li_11" >
+		<label class="description" for="element_11">Genres </label>
+		<span>
+			<input id="element_11_1" name="element_11_1" class="element checkbox" type="checkbox" value="1" />
+<label class="choice" for="element_11_1">Hip-Hop</label>
+<input id="element_11_2" name="element_11_2" class="element checkbox" type="checkbox" value="1" />
+<label class="choice" for="element_11_2">Top 40</label>
+<input id="element_11_3" name="element_11_3" class="element checkbox" type="checkbox" value="1" />
+<label class="choice" for="element_11_3">Electronic</label>
+<input id="element_11_4" name="element_11_4" class="element checkbox" type="checkbox" value="1" />
+<label class="choice" for="element_11_4">Other</label>
+
+		</span> 
+		</li>		<li id="li_10" >
+		<label class="description" for="element_10">Additional Info </label>
+		<div>
+			<textarea id="element_10" name="element_10" class="element textarea medium"></textarea> 
+		</div><p class="guidelines" id="guide_10"><small>i.e specific genres, further questions & event details you would want us to know.</small></p> 
+		</li>
+			
+					<li class="buttons">
+			    <input type="hidden" name="form_id" value="850018" />
+			    
+				<input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
+		</li>
+			</ul>
+		</form>	
+		
+	</div>
+	<img id="bottom" src="bottom.png" alt="">
+	</body>
+</html>

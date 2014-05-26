@@ -1,0 +1,101 @@
+body {
+  margin:0;
+  padding:0;
+}
+
+.container {
+  width:100%;
+  float:left;
+}
+
+
+#header{
+  width:100%;
+  /*position:fixed;*/
+  height:80px;
+  background:blue;
+  float:left;
+}
+ 
+#content {
+  width:100%;
+  margin:auto;
+}
+
+.event_holder {
+  float:left;
+  margin:auto;
+}
+/**
+ * CSS flip added by
+ */
+ .image {
+   width:100%;
+   height:100%;
+ }
+.panel {
+  width: 350px;
+  position: relative;
+  min-height: 1px;
+  margin:15px;
+  float:left;
+  display:block;
+}
+
+.row {
+  margin:auto;
+  display:block;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    -o-transition: all .5s;
+    -ms-transition: all .5s;
+    -moz-transition: all .5s;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+ 
+.front {
+    z-index: 2;
+    /*background-image: url('../images/golf1.jpg');*/
+	background-size:100% auto;
+    background-repeat: no-repeat;
+}
+ 
+.back {
+    z-index: 1;
+    -webkit-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);  
+    transform: rotateY(-180deg);  
+    /*background-image: url('../images/golf2.jpg');*/
+	background-size:100% auto;
+    background-repeat: no-repeat;
+}
+ 
+.panel:hover .front {
+    z-index: 1;
+    -webkit-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+ 
+.panel:hover .back {
+    z-index: 2;  
+    -webkit-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+}
+
+

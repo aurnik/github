@@ -1,0 +1,61 @@
+#signup-form{
+position: absolute;
+left: 0;
+right: 0;
+width:75%;
+margin:5% auto;
+-webkit-box-sizing:border-box;
+-moz-box-sizing:border-box;
+box-sizing:border-box;
+-webkit-border-radius:.6em;
+-moz-border-radius:.6em;
+-ms-border-radius:.6em;
+-o-border-radius:.6em;
+border-radius:.6em;
+display: none;
+background:grey;
+opacity:.6;
+}
+
+form {
+margin:15px;
+}
+
+input{
+width: 100%;
+padding:1.1em;
+border: 1px solid #A7A7A7;
+display: block;
+clear: both;
+}
+
+.input_field {
+  width:100%;
+  margin-bottom:20px;
+  margin-top:20px;
+}
+#signup-button {
+    width: 10em;
+    margin: 1em auto 2.5em;
+}
+
+
+#signup-email,#signup-event,#signup-company,#signup-telephone,#signup-date,#signup-start,#signup-end,#signup-contact,#signup-venue{
+margin-bottom:-1px;
+-webkit-box-sizing:border-box;
+-moz-box-sizing:border-box;
+box-sizing:border-box;
+margin:auto;
+width:50%;
+}
+
+#signup-other {
+margin-bottom:-1px;
+-webkit-box-sizing:border-box;
+-moz-box-sizing:border-box;
+box-sizing:border-box;
+margin:auto;
+width:50%;
+height:10em;
+}
+
