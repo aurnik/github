@@ -1,0 +1,154 @@
+@charset "UTF-8";
+/* CSS Document */
+body {
+	background-image:url("../img/banner2.jpg");
+	}
+a { color: inherit; } 
+
+
+#header{
+	height: 130px;
+	width: 100%;
+	
+	}
+#menu{
+	height: 80px;
+	float: right;
+	margin-right: 100px;
+	margin-top: 50px;}
+	
+
+#slider{
+	
+	}
+	
+.bg {
+	width: 100%;
+	top: 0;
+	left: 0;
+
+}
+#aboutus{ 
+	
+}
+#aboutscroll{
+	height:120px;
+	width:80%;
+	margin: 0 auto;
+	border:1px solid #ccc;
+	font:16px/26px Georgia, Garamond, Serif;
+	overflow:auto;
+	
+	
+}
+
+#aboutscroll2{
+	padding: 10px;
+}
+	
+#aboutcontainer{
+
+	margin: 0 auto;	
+	margin-top: 30px;
+}
+#about{
+	float: left;
+	color: #FFF;
+	padding-top: 20px;
+	padding-bottom: 50px;
+	padding-left:50px;
+	padding-right:50px;
+	}
+#hiredcontainer{
+	width:80%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#hired{	
+	margin-top: 50px;
+	float: left;
+	margin-right: 10px;
+}
+
+#hired2{ 
+	float: right;
+	text-align: left;
+	padding: 5px;
+	max-height: 150px; 
+	width: 300px;
+	display: inline-block;
+	margin-top: 50px;
+    overflow: auto; 
+	border: 1px solid white; 
+	}
+td { border-bottom: 1px solid black; }
+
+#booking{
+	float: left;
+	clear: both;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	display: table;
+	text-align: center;
+}
+.button{
+	
+	width: 400px;
+	margin-left: 100px;
+	display: inline-block;
+    position: relative;
+    margin: 10px;
+	margin-left: auto;
+	margin-right: auto;
+    padding: 0 20px;
+    text-align: center;
+    text-decoration: none;
+    font: bold 12px/25px Arial, sans-serif;
+ 
+    text-shadow: 1px 1px 1px rgba(255,255,255, .22);
+ 
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+ 
+    -webkit-box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+    -moz-box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+    box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+ 
+    -webkit-transition: all 0.15s ease;
+    -moz-transition: all 0.15s ease;
+    -o-transition: all 0.15s ease;
+    -ms-transition: all 0.15s ease;
+    transition: all 0.15s ease;
+}
+
+#footer{
+	width: 100%;
+	color: #FFF;
+	height: 40px;
+	background-color:#000;
+	position: fixed;
+	bottom: 0px;
+	}
+.gray {
+    color: #515151;
+ 
+    background: #d3d3d3; /* Old browsers */
+    background: -moz-linear-gradient(top,  #d3d3d3 0%, #8a8a8a 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d3d3d3), color-stop(100%,#8a8a8a)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #d3d3d3 0%,#8a8a8a 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #d3d3d3 0%,#8a8a8a 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #d3d3d3 0%,#8a8a8a 100%); /* IE10+ */
+    background: linear-gradient(top,  #d3d3d3 0%,#8a8a8a 100%); /* W3C */
+}
+	
+#signup {
+	margin-top: 10px;
+	width: 300px;
+	height: 80px;
+	float: right;	
+
+}
