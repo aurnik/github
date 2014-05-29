@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="author" content="aurnik" >
+	<meta name="description" content="COGS187B SP14">
+    <title>DVC::Redesign</title>	
+	<link href="css/form.css" rel="stylesheet">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="./js/isotope.pkgd.min.js"></script>
+	<style>
+	.stuff {
+		margin-top: 100px;
+	}
+	* {
+	  -webkit-box-sizing: border-box;
+	     -moz-box-sizing: border-box;
+	          box-sizing: border-box;
+	}
+
+	body {
+	  font-family: sans-serif;
+	}
+
+
+	/* ---- isotope ---- */
+
+	.isotope {
+	  margin: auto;
+	  max-width: 1200px;
+	}
+
+	/* clear fix */
+	.isotope:after {
+	  content: '';
+	  display: block;
+	  clear: both;
+	}
+
+	/* ---- .item ---- */
+
+	.item {
+	  float: left;
+	  width: 100px;
+	  height: 100px;
+	  margin-bottom: 20px;
+	  background: #0D8;
+	  border: 2px solid #333;
+	  border-color: hsla(0, 0%, 0%, 0.7);
+	}
+
+	/* 2 cols + 1 gutter = 100 + 20 + 100 */
+	.item.width2 { width: 220px; }
+	.item.height2 { height: 220px; }
+	.item.width4 { width: 460px; }
+	.item.height4 { height: 460px; }
+
+	.nav {
+		top: 0px;
+	}
+
+	</style>
+  </head>
+  
+<body>
+  <div class="nav">
+	<div class="link">
+		<a href="events.html">events</a>
+	</div>
+	<div class="link">
+		<a href="form.html">booking</a>
+	</div>
+	<div class="link">
+		<a href="calendar.html">calendar</a>
+	</div>
+	<div class="link">
+		media
+	</div>
+	<div class="link">
+		artists
+	</div>
+	<div class="link">
+		<a href="about.html">about</a>
+	</div>
+  </div>
+<div class="stuff">
+<div class="isotope js-isotope" data-isotope-options='{ "itemSelector": ".item", "masonry": { "columnWidth": 100, "gutter": 20 } }'>
+  <div class="item width4 height2">title/video</div>
+  <div class="item height2">pic</div>
+  <div class="item">pic</div>
+  <div class="item">pic</div>
+  <div class="item width2 height2">pic</div>
+  <div class="item width2">pic</div>
+  <div class="item width2">pic</div>
+  <div class="item height2">pic</div>
+  <div class="item">pic</div>
+  <div class="item width2">pic</div>
+  <div class="item height2">pic</div>
+  <div class="item">pic</div>
+  <div class="item">pic</div>
+  <div class="item width2">pic</div>
+  <div class="item height2">pic</div>
+  <div class="item">pic</div>
+  <div class="item">pic</div>
+  <div class="item width2 height2">pic</div>
+  <div class="item width2">pic</div>
+  <div class="item width2">pic</div>
+  <div class="item height2">pic</div>
+  <div class="item">pic</div>
+  <div class="item width2">pic</div>
+  <div class="item height2">pic</div>
+  <div class="item">pic</div>
+  <div class="item">pic</div>
+  <div class="item">pic</div>
+  <div class="item">pic</div>
+  <div class="item">pic</div>
+  <div class="item">pic</div>
+</div>
+</div>
+
+
+
+  <script type="text/javascript">
+  	var $container = $('#container');
+	// init
+	$container.isotope({
+	  // options
+	  itemSelector: '.item',
+	  layoutMode: 'masonry',
+	  masonry: {
+		  columnWidth: 50,
+		  gutter: 10
+		}
+	});
+  </script>
+</body>
+</html>
