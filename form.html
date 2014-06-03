@@ -7,6 +7,28 @@
 	<link href="css/form.css" rel="stylesheet">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="js/form.js"></script>
+	<script type="text/javascript" src="js/accordion.js"></script>
+	<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="js/jquery.timepicker.js"></script>
+	<script type="text/javascript" src="js/datepair.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.accordion').accordion({defaultOpen: 'some_id'}); //some_id section1 in demo
+
+                $('#basicExample .time').timepicker({
+        'showDuration': true,
+        'timeFormat': 'g:ia'
+    });
+
+    $('#basicExample .date').datepicker({
+        'format': 'm/d/yyyy',
+        'autoclose': true
+    });
+
+    // initialize datepair
+    $('#basicExample').datepair();
+        });
+    </script>
   </head>
   
 <body>
@@ -30,8 +52,50 @@
 		<a href="about.html">about</a>
 	</div>
   </div>
+<form id="signup-form" style="display:block;">
+  <div class="accordion" id="section1">Contact Information<span></span></div>
+    <div class="container">
+       <label>Contact Name*</label>
+	   <input id="signup-contact" type="text" placeholder="Mary Poppins">
+	   <br>
+	   <label> Email* </label>
+       <input id="signup-email" type="text" placeholder="mary@ucsd.edu">
+       <br>
+       <label>Phone Number</label>
+	   <input id="signup-telephone" type="text" placeholder="760-717-0000">
+	   <br>
+	   <label>Phone Number</label>
+	   <input id="signup-telephone" type="text" placeholder="760-717-0000">
+    </div>
+  </div>
+  <div class="accordion" id="section2">Event Information<span></span></div>
+    <div class="container">
+    	<label> Event Name* </label>
+	    <input id="signup-event" type="text" placeholder="Something Awesome">
+	    <br>
+         <p id="basicExample">
+		    <input type="text" class="date start" />
+		    <input type="text" class="time start" /> 
+		    <input type="text" class="time end" />
+		    <input type="text" class="date end" />
+		</p>
+		<br>
+    </div>
+  </div>
+  <div class="accordion" id="section3">Other Information<span></span></div>
+    <div class="container">
+    	<label> Event Name* </label>
+	    <input id="signup-event" type="text" placeholder="Something Awesome">
+	    <br>
 
-  <form id="signup-form" style="display:block;">
+    	
+    </div>
+  </div>
+
+</form>
+</body>
+</html>
+ <!-- <form id="signup-form" style="display:block;">
     <br>
     <div class="row">
 	    <label>Contact Name*</label>
@@ -49,8 +113,8 @@
 	</div>
 	<br>
 	<div class="row">
-      <label>Organization*</label>
-      <input id="signup-company" type="text" placeholder="UCSD DVC">
+       <label>Phone Number</label>
+	  <input id="signup-telephone" type="text" placeholder="760-717-0000">
     </div>
 	<br>
 	<div class="row">
