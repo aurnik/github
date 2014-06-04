@@ -56,66 +56,108 @@
                 <a href="about.html">about</a>
             </div>
   </div>
-<form id="signup-form" style="display:block;" action="formtoemailpro.php" method="post">
-  <div class="accordion" id="section1">Contact Information<span></span></div>
-    <div class="container">
-    <table>
-       <tr><td><label>Contact Name**</label></td>
-	   <td><input id="signup-contact" type="text" name="signup-contact" placeholder="Mary Poppins" /></td></tr>
-	   <br>
-	   <label> Email* </label>
-       <input id="signup-email" type="text" name="signup-email" placeholder="mary@ucsd.edu"/>
-       <br>
-       <label>Phone Number</label>
-	   <input id="signup-telephone" type="text" name="signup-telephone" placeholder="760-717-0000"/>
-	   <br>
-	   <label>Phone Number</label>
-	   <input id="signup-telephone" type="text" name="signup-telephone" placeholder="760-717-0000"/>
-	</table>
-    
-  </div>
-  <div class="accordion" id="section2">Event Information<span></span></div>
-    <div class="container">
-    	<table>
-    	<label> Event Name* </label>
-	    <input id="signup-event" type="text" name="signup-event" placeholder="Something Awesome"/>
-	    <br>
-	    <label>Venue</label>
-        <input id="signup-venue" type="text" name="signup-venue" placeholder="UCSD Price Center"/>
-         <p id="basicExample">
-		    <input type="text" name="Date Start" class="date start" />
-		    <input type="text" name="Time Start" class="time start" /> 
-		    <input type="text" name="Time End" class="time end" />
-		    <input type="text" name="Date End" class="date end" />
-		</p>
-		<br>
-		Top 40
-	  	<input type="checkbox" name="vehicle" value="Bike">
-		<br>
-		Hip-Hop
-	    <input type="checkbox" name="vehicle" value="Car">
-		<br>
-		Dubstep
-		<input type="checkbox" name="vehicle" value="Bike">
-		<br>
-		Other
-	    <input type="checkbox" name="vehicle" value="Car">
-	</table>
-    
-  </div>
-  <div class="accordion" id="section3">Other Information<span></span></div>
-    <div class="container">
-    	<label> Other Comments </label>
-	     <textarea id="signup-comments" cols="50" rows="10" placeholder="Enter any additional comments"></textarea>
-	    <br>
+  <div id="form_background">
+    <form id="signup-form" style="display:block;" action="formtoemailpro.php" method="post">
+      <div class="accordion" id="section1">Step1: Contact Information<span></span></div>
+        <div class="container">
+          <div class="row">
+            <div class="text">
+              <label>Contact Name**</label>
+            </div>
+    	      <input id="signup-contact" type="text" name="signup-contact" placeholder="Mary Poppins" />
+          </div>
+    	    <br>
+          <div class="row">
+            <div class="text">
+    	        <label> Email* </label>
+            </div>
+            <input id="signup-email" type="text" name="signup-email" placeholder="mary@ucsd.edu"/>
+          </div>
+          <br>
+          <div class="row">
+            <div class="text">
+              <label>Phone Number</label>
+            </div>
+    	      <input id="signup-telephone" type="text" name="signup-telephone" placeholder="760-717-0000"/>
+          </div>
+    	    <br>
+          <div class="row">
+            <div class="text">
+        	    <label>Phone Number</label>
+            </div>
+        	  <input id="signup-telephone" type="text" name="signup-telephone" placeholder="760-717-0000"/>
+          </div>
+      </div>
+      <div class="accordion" id="section2">STEP2: Event Information<span></span></div>
+        <div class="container">
+          <div class ="row">
+            <div class="text">
+        	   <label> Event Name* </label>
+            </div>
+    	      <input id="signup-event" type="text" name="signup-event" placeholder="Something Awesome"/>
+          </div>
+    	    <br>
+          <div class="row">
+            <div class="text">
+    	        <label>Venue</label>
+            </div>
+            <input id="signup-venue" type="text" name="signup-venue" placeholder="UCSD Price Center"/>
+          </div>
+            <p id="basicExample">
+              <div class="row">
+                <div class="text">
+                  <label>Start Date</label>
+                </div>
+        		    <input type="text" name="Date Start" class="date start" />
+                <div class="text">
+                  <label>Start Time</label>
+                </div>
+        		    <input type="text" name="Time Start" class="time start" /> 
+              </div>
+              <div class="row">
+                <div class="text">
+                  <label>End Time</label>
+                </div>
+        		    <input type="text" name="Time End" class="time end" />
+                <div class="text">
+                  <label>End Date</label>
+                </div>
+        		    <input type="text" name="Date End" class="date end" />
+              </div>
+    		    </p>
+    		<br>
+        <div class="row">
+    		Top 40
+    	  	<input type="checkbox" name="genre" />
+    		<br>
+    		Hip-Hop
+    	    <input type="checkbox" name="genre" />
+    		<br>
+    		Dubstep
+    		<input type="checkbox" name="genre" />
+    		<br>
+    		Other
+    	  <input type="checkbox" name="genre" />
+        </div>
+        
+      </div>
+      <div class="accordion" id="section3">STEP3: Other Information<span></span></div>
+        <div class="container">
+          <div class="row">
+            <div class="text">
+          	  <label> Other Comments </label>
+            </div>
+      	     <textarea id="signup-comments" cols="50" rows="10" placeholder="Enter any additional comments"></textarea>
+          </div>
+    	    <br>
 
-    	
-    
-  </div>
+        	
+        
+      </div>
 
-  <input type="submit" value="Send">
-</form>
-
+      <input id="save" type="submit" value="Send"/>
+    </form>
+</div>
 </body>
 </html>
  
