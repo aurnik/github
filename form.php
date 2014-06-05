@@ -40,7 +40,7 @@
   </div>
   <div id="form_background">
     <form id="signup-form" style="display:block;" action="formtoemailpro.php" method="post">
-      <div class="accordion" id="section1">Step1: Contact Information<span></span></div>
+      <div class="accordion" id="section1">Step 1: Contact Information<span></span></div>
         <div class="container">
           <div class="row">
             <div class="text">
@@ -64,7 +64,7 @@
           </div>
     	    <br>
       </div>
-      <div class="accordion" id="section2">STEP2: Event Information<span></span></div>
+      <div class="accordion" id="section2">STEP 2: Event Information<span></span></div>
         <div class="container">
           <div class ="row">
             <div class="text">
@@ -121,13 +121,13 @@
           </div> 
       </div>
     </div>
-      <div class="accordion" id="section3">STEP3: Other Information<span></span></div>
+      <div class="accordion" id="section3">STEP 3: Other Information<span></span></div>
         <div class="container">
           <div class="row">
             <div class="text">
           	  <label> Additional Comments</label>
             </div>
-      	     <textarea id="signup-comments" cols="50" rows="10" placeholder="Enter any additional comments"></textarea>
+      	     <textarea id="signup-comments" cols="50" rows="5" placeholder="Enter any additional comments"></textarea>
           </div>
     	    <br>   	       
         </div>

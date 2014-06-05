@@ -1,7 +1,7 @@
 $(document).ready(function() {
       
 
-	$('.accordion').accordion({defaultOpen: 'some_id'}); //some_id section1 in demo
+	$('.accordion').accordion({defaultOpen: 'section1'}); //some_id section1 in demo
 
 	$('.square_container .time').timepicker({
 	'showDuration': true,
@@ -15,6 +15,8 @@ $(document).ready(function() {
 
     // initialize datepair
     $('.square_container').datepair();
+
+
 
 
   
