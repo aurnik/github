@@ -8,6 +8,7 @@
   	<link href="css/events.css" rel="stylesheet">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/events.js"></script>
+    <script src="http://www.parsecdn.com/js/parse-1.2.18.min.js"></script>
   </head>
   <body>
     <div class="nav">
@@ -45,5 +46,15 @@
         </div>
     </div>
   </div>
+
+  <script type="text/javascript">
+    Parse.initialize("dPVyQwJBcQFZnfI4YjDYZIKPuLRfEX7EZX8JyOss", "OoiaaYnOzqofHOMDeN6zOfQnVmMKsPLzv1PWoUrd");
+
+    var TestObject = Parse.Object.extend("TestObject");
+    var testObject = new TestObject();
+    testObject.save({foo: "bar"}).then(function(object) {
+      alert("yay! it worked");
+    });
+  </script>
   </body>
 </htmL>
