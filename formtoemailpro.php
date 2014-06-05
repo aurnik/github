@@ -494,7 +494,7 @@ Form fields order.  In the array below ($field_order_keys) you can set the order
 
 */
 
-$field_order_keys = array('signup-contact','signup-email','signup-telephone','signup-event', 'signup-venue','signup-comments', 'Date Start');
+$field_order_keys = array('signup-contact','signup-email','signup-telephone','signup-event', 'signup-venue', 'Date Start', 'Time Start', 'Time End', 'genre','signup-comments');
 
 /*
 
