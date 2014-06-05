@@ -6,7 +6,9 @@
     <title>DVC::Redesign</title>	
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
 	<link href="css/form.css" rel="stylesheet">
+	<link href="css/magnific-popup.css" rel="stylesheet">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="js/box.js"></script>
 	<style>
 	.stuff {
 		margin-top: 100px;
@@ -49,17 +51,30 @@
 	/* 2 cols + 1 gutter = 100 + 20 + 100 */
 	.item.width2 { 
 		width: 220px; 
-		background-size: 100% auto;
+		background-size: 100% auto;	
 	}
 	.item.height2 { 
-		height: 220px; 
-		background-size: auto 100%;
+		height: 220px;
+		background-size: auto 100%; 
 	}
 	.item.width4 { width: 460px; }
 	.item.height4 { height: 460px; }
 
 	.nav {
 		top: 0px;
+	}
+
+	button {
+		font-family: "Lato", sans-serif;
+		font-weight: 100;
+		color: white;
+		background: black;
+		border: 0px;
+		padding: 5px 10px;
+	}
+	#filters {
+		text-align: center;
+		margin-bottom: 10px;
 	}
 
 	</style>
@@ -90,44 +105,14 @@
 			</div>
   </div>
 <div class="stuff">
-<div id="iso" class="isotope js-isotope" data-isotope-options='{ "itemSelector": ".item", "masonry": { "columnWidth": 100, "gutter": 20 } }'>
-  <!--div class="item width4 height2">title/video</div>
-  <div class="item height2"><img src="./img/building1.jpg" width="100%" height="100%"></div>
-  <div class="item"><img src="./img/building1.jpg" width="100%" height="100%"></div>
-  <div class="item"><img src="./img/building1.jpg" width="100%" height="100%"></div>
-  <div class="item width2 height2"><img src="./img/building1.jpg" width="100%" height="100%"></div>
-  <div class="item width2"><img src="./img/building1.jpg" width="100%" height="100%"></div>
-  <div class="item width2"><img src="./img/building1.jpg" width="100%" height="100%"></div>
-  <div class="item height2">pic</div>
-  <div class="item">pic</div>
-  <div class="item width2">pic</div>
-  <div class="item height2">pic</div>
-  <div class="item">pic</div>
-  <div class="item">pic</div>
-  <div class="item width2">pic</div>
-  <div class="item height2">pic</div>
-  <div class="item">pic</div>
-  <div class="item">pic</div>
-  <div class="item width2 height2">pic</div>
-  <div class="item width2">pic</div>
-  <div class="item width2">pic</div>
-  <div class="item height2">pic</div>
-  <div class="item">pic</div>
-  <div class="item width2">pic</div>
-  <div class="item height2">pic</div>
-  <div class="item">pic</div>
-  <div class="item">pic</div>
-  <div class="item">pic</div>
-  <div class="item">pic</div>
-  <div class="item">pic</div>
-  <div class="item">pic</div-->
-</div>
-
-<script type="text/javascript">
-  	
-
-	
-	</script>
+	<div id="filters" class="button-group">
+	  <button data-filter="*">ALL</button>
+	  <button data-filter=".somethingawesome">#somethingawesome</button>
+	  <button data-filter=".somethingnasty">#somethingnasty</button>
+	</div>
+	<div id="iso" class="isotope js-isotope popup-gallery" data-isotope-options='{ "itemSelector": ".item", "masonry": { "columnWidth": 100, "gutter": 20 } }'>
+		
+	</div>
 
 </div>
 
@@ -150,17 +135,17 @@
 		}
 	});
 
+	$('#filters').on( 'click', 'button', function() {
+	  var filterValue = $(this).attr('data-filter');
+	  $container.isotope({ filter: filterValue });
+	});
+
 	$.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?id=125037986@N07&lang=en-us&format=json&jsoncallback=?", function(person){
 
 	    var pics = person["items"];
 	    var elems = [];
 	    for( var i = 0; i < pics.length ; i++) {
-	    	//var node=document.createElement("IMG");
-	    	//node.src = pics[i]["media"]["m"];
-	    	var div = document.createElement("DIV");
-	    	div.className = "item";
-	    	div.style.backgroundImage = "url(\"" + pics[i]["media"]["m"] + "\")";
-	    	//div.appendChild(node);
+	    	var smallPic = pics[i]["media"]["m"];
 
 	    	var str = pics[i]["description"];
 	    	var posW = str.indexOf("width");
@@ -168,14 +153,22 @@
 	    	var posA = str.indexOf("alt");
 	    	var height = parseInt(str.substring(posH + 8, posA - 2));
 	    	var width = parseInt(str.substring(posW + 7, posH - 2));
+	    	var aa = document.createElement("A");
+	    	aa.className = "item";
+	    	var fullPic = smallPic.substring(0, smallPic.length - 5) + "z" + smallPic.substring(smallPic.length - 4, smallPic.length);
+	    	aa.href = fullPic;
+	    	aa.title = pics[i]["title"];
+	    	aa.dataset.tags = pics[i]["tags"];
+	    	aa.style.backgroundImage = "url(\"" + smallPic + "\")";
 	    	if(width >= height * 1.5) {
-	    		div.className = "item width2";
+	    		aa.className = "item width2";
 	    	}
 	    	else if(height >= width * 1.5) {
-	    		div.className = "item height2";
+	    		aa.className = "item height2";
 	    	}
+	    	aa.className = aa.className + " " + aa.dataset.tags;
 
-			elems.push(div);
+			elems.push(aa);
 	    }
 
 		$container.isotope( 'insert', elems );
@@ -187,6 +180,33 @@
 		    var target2 = Math.floor(Math.random() * cards.length -1) +1;
 		    cards.eq(target).before(cards.eq(target2));
 		}*/
+
+		$(document).ready(function() {
+			$('.popup-gallery').magnificPopup({
+				delegate: 'a',
+				type: 'image',
+				tLoading: 'Loading image #%curr%...',
+				mainClass: 'mfp-img-mobile',
+				gallery: {
+					enabled: true,
+					navigateByImgClick: true,
+					preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+				},
+				image: {
+					tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+					titleSrc: function(item) {
+						var orig = item.el.attr('data-tags').split(" ");
+						var newstr = "";
+						if(orig[0] != "") {
+							for ( var x = 0; x < orig.length ; x++ ) {
+								newstr = newstr + "#" + orig[x] + " ";
+							}
+						}
+						return item.el.attr('title') + "<small>" + newstr + "</small>";
+					}
+				}
+			});
+		});
 	});
   </script>
 </body>
