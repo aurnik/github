@@ -4,6 +4,7 @@
     <meta name="author" content="Nick Ardecky" >
 	<meta name="description" content="COGS187B SP14">
     <title>DVC::Redesign</title>	
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
 	<link href="css/form.css" rel="stylesheet">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="js/form.js"></script>
@@ -32,7 +33,6 @@
   </head>
   
 <body>
-<img src="img/logo-transwhite.png" style="height: 78px; width: 78px; position: fixed; top:0px; left: 10px;z-index: 9000000;">
   <div class="nav">
   	<div class="link">
 				<a href="index.html">home</a>
