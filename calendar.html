@@ -60,6 +60,9 @@
 		<script type="text/javascript" src="js/jquery.calendario.js"></script>
 		<script type="text/javascript" src="js/data.js"></script>
 		<script type="text/javascript">	
+			var winHt = window.innerHeight - 60;
+			$('.container').css("height",winHt);
+
 			$(function() {
 			
 				var cal = $( '#calendar' ).calendario( {

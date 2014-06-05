@@ -8,6 +8,7 @@
   	<link href="css/events.css" rel="stylesheet">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/events.js"></script>
+    <script src="http://www.parsecdn.com/js/parse-1.2.18.min.js"></script>
   </head>
   <body>
     <div class="nav">
@@ -45,5 +46,26 @@
         </div>
     </div>
   </div>
+
+  <script type="text/javascript">
+    Parse.initialize("dPVyQwJBcQFZnfI4YjDYZIKPuLRfEX7EZX8JyOss", "OoiaaYnOzqofHOMDeN6zOfQnVmMKsPLzv1PWoUrd");
+
+    var events = Parse.Object.extend("EVENTS");
+    var query = new Parse.Query(events);
+    query.equalTo("name", "Something Nasty");
+    query.find({
+      success: function(results) {
+        alert("Successfully retrieved " + results.length + " scores.");
+        // Do something with the returned Parse.Object values
+        for (var i = 0; i < results.length; i++) { 
+          var object = results[i];
+          alert(object.id + ' - ' + object.get('name'));
+        }
+      },
+      error: function(error) {
+        alert("Error: " + error.code + " " + error.message);
+      }
+    });
+  </script>
   </body>
 </htmL>
