@@ -89,7 +89,7 @@ Enter the email address below to send the contents of the form to.  Like this fo
 
 */
 
-$my_email = "jeffjames88@gmail.com";
+$my_email = "djclub@ucsd.edu";
 
 /*
 

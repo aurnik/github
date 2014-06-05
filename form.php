@@ -44,7 +44,7 @@
         <div class="container">
           <div class="row">
             <div class="text">
-              <label>Contact Name**</label>
+              <label>Contact Name*</label>
             </div>
     	      <input id="signup-contact" type="text" name="signup-contact" placeholder="Mary Poppins" />
           </div>
@@ -83,55 +83,49 @@
           <div class="square_container">
             <div class="short_row">
               <div class="text">
-                <label>Start Date</label>
+                <label>Date</label>
               </div>
-      		    <input type="text" name="Date Start" class="date start" />
+      		    <input type="text" name="Date Start" class="date start small" />
             </div>
             <div class="short_row">
               <div class="text">
                 <label>Start Time</label>
               </div>
-      		    <input type="text" name="Time Start" class="time start" /> 
+      		    <input type="text" name="Time Start" class="time start small" /> 
             </div>
-            <br>
-            <div class="short_row">
+            <div id="end" class="short_row">
+              <div id="semi"> - </div>
               <div class="text">
                 <label>End Time</label>
               </div>
-      		    <input type="text" name="Time End" class="time end" />
+      		    <input type="text" name="Time End" class="time end small" />
             </div>
-            <div class="short_row">
-              <div class="text">
-                <label>End Date</label>
-              </div>
-      		    <input type="text" name="Date End" class="date end" />
-            </div>
-        </div>
-    		<br>
-        <div class="short_row">
-    		Top 40
-    	  	<input type="checkbox" name="genre" />
-        </div>
-        <div class="short_row">
-    		Hip-Hop
-    	    <input type="checkbox" name="genre" />
         </div>
         <br>
-        <div class="short_row">
-    		Dubstep
-    		<input type="checkbox" name="genre" />
-        </div>
-    		<div class="short_row">
-    		Other
-    	  <input type="checkbox" name="genre" />
-        </div> 
-        <br>    
+        <div class="row">
+          <div class="short_row check1">
+      		  <label>Top-40</label>
+      	  	<input type="checkbox" name="genre" />
+          </div>
+          <div class="short_row check1">
+      		  <label>Hip-Hop</label>
+      	    <input type="checkbox" name="genre" />
+          </div>
+          <div class="short_row check1">
+      		  <label>Dubstep</label>
+      		  <input type="checkbox" name="genre" />
+          </div>
+      		<div class="short_row check1">
+      		  <label>Other</label>
+      	    <input type="checkbox" name="genre" />
+          </div> 
       </div>
+    </div>
       <div class="accordion" id="section3">STEP3: Other Information<span></span></div>
         <div class="container">
           <div class="row">
             <div class="text">
-          	  <label> Additional Comments: </label>
+          	  <label> Additional Comments</label>
             </div>
       	     <textarea id="signup-comments" cols="50" rows="10" placeholder="Enter any additional comments"></textarea>
           </div>
