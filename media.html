@@ -46,7 +46,7 @@
 		background-position: center;
 		background-position-y: center;
 		background-position-x: center;
-		background-size: 100% auto;
+		background-size: auto 100%;
 	}
 
 	/* 2 cols + 1 gutter = 100 + 20 + 100 */
@@ -110,8 +110,9 @@
 	  <button data-filter="*">ALL</button>
 	  <button data-filter=".somethingawesome">#somethingawesome</button>
 	  <button data-filter=".somethingnasty">#somethingnasty</button>
+	  <button data-filter=".letsbounce">#letsbounce</button>
 	</div>
-	<div id="iso" class="isotope js-isotope popup-gallery" data-isotope-options='{ "itemSelector": ".item", "masonry": { "columnWidth": 100, "gutter": 20 } }'>
+	<div id="iso" class="isotope js-isotope popup-gallery" data-isotope-options='{ "itemSelector": ".item", "sortBy": "random", "masonry": { "columnWidth": 100, "gutter": 20 } }'>
 		
 	</div>
 
@@ -126,42 +127,44 @@
 
 	var $container = $('#iso');
 	// init
-	$container.isotope({
+	/*$container.isotope({
 	  // options
 	  itemSelector: '.item',
 	  layoutMode: 'masonry',
+	  getSortData: {},
+	  sortBy: 'random',
 	  masonry: {
 		  columnWidth: 50,
 		  gutter: 10
 		}
-	});
+	});*/
 
 	$('#filters').on( 'click', 'button', function() {
 	  var filterValue = $(this).attr('data-filter');
 	  $container.isotope({ filter: filterValue });
 	});
 
-	$.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?id=125037986@N07&lang=en-us&format=json&jsoncallback=?", function(person){
-
-	    var pics = person["items"];
+	$.getJSON("https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&api_key=943b073f180ecf9113b36262bbcb8480&user_id=125037986%40N07&extras=url_o%2C+url_m%2C+tags&format=json&nojsoncallback=1", function(person){
+		
+	    var pics = person["photos"]["photo"];
 	    var elems = [];
 	    for( var i = 0; i < pics.length ; i++) {
-	    	var smallPic = pics[i]["media"]["m"];
+	    	var smallPic = pics[i]["url_m"];
 
 	    	var str = pics[i]["description"];
-	    	var posW = str.indexOf("width");
-	    	var posH = str.indexOf("height");
-	    	var posA = str.indexOf("alt");
-	    	var height = parseInt(str.substring(posH + 8, posA - 2));
-	    	var width = parseInt(str.substring(posW + 7, posH - 2));
+	    	var height = pics[i]["height_o"];
+	    	var width = pics[i]["width_o"];
 	    	var aa = document.createElement("A");
 	    	aa.className = "item";
-	    	var fullPic = smallPic.substring(0, smallPic.length - 5) + "z" + smallPic.substring(smallPic.length - 4, smallPic.length);
-	    	aa.href = fullPic;
+	    	//var fullPic = smallPic.substring(0, smallPic.length - 5) + "c" + smallPic.substring(smallPic.length - 4, smallPic.length);
+	    	aa.href = pics[i]["url_o"];
 	    	aa.title = pics[i]["title"];
 	    	aa.dataset.tags = pics[i]["tags"];
 	    	aa.style.backgroundImage = "url(\"" + smallPic + "\")";
 	    	if(width >= height * 1.5) {
+	    		if(width/height > 2.2) {
+	    			aa.style.backgroundSize = "auto 100%";
+	    		}
 	    		aa.className = "item width2";
 	    	}
 	    	else if(height >= width * 1.5) {
