@@ -64,6 +64,7 @@
 			$('.container').css("height",winHt);
 
 			$(function() {
+				
 			    
 				var cal = $( '#calendar' ).calendario( {
 						onDayClick : function( $el, $contentEl, dateProperties ) {
@@ -73,10 +74,27 @@
 							}
 
 						},
+						startIn : 0,
 						caldata : codropsEvents
 					} ),
 					$month = $( '#custom-month' ).html( cal.getMonthName() ),
 					$year = $( '#custom-year' ).html( cal.getYear() );
+				$.getJSON("http://www.google.com/calendar/feeds/p1c3rb7397rqf3jcgfmij6hp08@group.calendar.google.com/public/full?alt=json", function(calendar) {
+    
+					var arr = calendar["feed"]["entry"];
+					window.cal = arr;
+					for (var i = 0; i < arr.length; i++) {
+						if(arr[i]["gd$when"] != null) {
+						    var title = arr[i]["title"]["$t"];
+						    var date = arr[i]["gd$when"][0]["startTime"];
+						    date = date.substr(5,5) + "-" + date.substr(0,4);
+						    console.log(date);
+						    console.log(title);
+						    var jsonData = "{\"" + date + "\": \"<span>" + title + "</span>\"}";
+							cal.setData(JSON.parse(jsonData));
+						}
+					}
+				});
 
 				$( '#custom-next' ).on( 'click', function() {
 					cal.gotoNextMonth( updateMonthYear );
