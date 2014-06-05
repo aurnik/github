@@ -8,9 +8,14 @@
 	<link href="css/events.css" rel="stylesheet">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/events.js"></script>
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/lightbox2.js"></script>
+    <link href="css/lightbox.css" rel="stylesheet" />
   </head>
   <style type="text/css">
-
+  body{
+    text-align: center;
+  }
     h4 {
 
       color:white;
@@ -19,11 +24,14 @@
     }
 
     .container {
-        width: 100%;
+        width: 70%;
+        margin: 100px 15%;
+
     }
     .row {
         margin: auto;
         text-align: center;
+
     }
 
     .artist-img {
@@ -34,6 +42,9 @@
         display: inline-block;
         overflow: hidden;
         position: relative;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: 15px;
     }
     .artist-img .name {
         text-align: center;
@@ -53,6 +64,10 @@
         top: 0px;
         left: 0px;
     }
+    .artist-img:hover {
+        border: 4px solid lightblue;
+    }
+
     .vert-center {
         top: 50%;
         transform: translateY(-50%);
@@ -86,14 +101,123 @@
             <div class="link">
                 <a href="about.html">about</a>
             </div>
+        </div>
 </div>
 <div class="container">
+<div style=" 
+     color: #FFF; margin-bottom: 10px;font-weight: 200;
+                font-size: 60px;
+                "> Artists</div>
     <div class="row">
         <div class="artist-img">
             <div class="name vert-center">
-                artist
+                SillyBear
             </div>
-            <img src="images/golf1.jpg">
+           
+            <a href ="images/artist1.png" data-lightbox="artists" data-title="Aurnik Islam">
+            <img src="images/artist1.png">
+            </a>
+        
+        </div>
+    <div class="artist-img">
+            <div class="name vert-center">
+                Gnardecky
+            </div>
+           
+            <a href ="images/artist2.png" data-lightbox="artists" data-title="Nick Ardecky">
+            <img src="images/artist2.png">
+            </a>
+        </div>
+
+    <div class="artist-img">
+            <div class="name vert-center">
+                Andrew
+            </div>
+           
+            <a href ="images/artist3.png" data-lightbox="artists" data-title="Andrew Alvarez">
+            <img src="images/artist3.png">
+            </a>
+        </div>
+    <div class="artist-img">
+            <div class="name vert-center">
+                Matthew
+            </div>
+           
+            <a href ="images/artist4.png" data-lightbox="artists" data-title="Aurnik Islam">
+            <img src="images/artist4.png">
+            </a>
+        </div>
+    <div class="artist-img">
+            <div class="name vert-center">
+                Steve
+            </div>
+           
+            <a href ="images/artist5.png" data-lightbox="artists" data-title="Aurnik Islam">
+            <img src="images/artist5.png">
+            </a>
+        </div>
+        <div class="artist-img">
+            <div class="name vert-center">
+                Eric
+            </div>
+           
+            <a href ="images/artist6.png" data-lightbox="artists" data-title="Aurnik Islam">
+            <img src="images/artist6.png">
+            </a>
+        </div>
+        <div class="artist-img">
+            <div class="name vert-center">
+                Patrick
+            </div>
+           
+            <a href ="images/artist5.png" data-lightbox="artists" data-title="Aurnik Islam">
+            <img src="images/artist5.png">
+            </a>
+        </div>
+        <div class="artist-img">
+            <div class="name vert-center">
+                Alex
+            </div>
+           
+            <a href ="images/artist4.png" data-lightbox="artists" data-title="Aurnik Islam">
+            <img src="images/artist4.png">
+            </a>
+        </div>
+        <div class="artist-img">
+            <div class="name vert-center">
+                Daniel
+            </div>
+           
+            <a href ="images/artist3.png" data-lightbox="artists" data-title="Aurnik Islam">
+            <img src="images/artist3.png">
+            </a>
+        </div>
+        <div class="artist-img">
+            <div class="name vert-center">
+                Aaron
+            </div>
+           
+            <a href ="images/artist2.png" data-lightbox="artists" data-title="Aurnik Islam">
+            <img src="images/artist2.png">
+            </a>
+        </div>
+        <div class="artist-img">
+            <div class="name vert-center">
+                Bernard
+            </div>
+           
+            <a href ="images/artist1.png" data-lightbox="artists" data-title="Aurnik Islam">
+            <img src="images/artist1.png">
+            </a>
+        </div>
+        <div class="artist-img">
+            <div class="name vert-center">
+                Christopher
+            </div>
+           
+            <a href ="images/artist4.png" data-lightbox="artists" data-title="Aurnik Islam">
+            <img src="images/artist4.png">
+            </a>
         </div>
     </div>
 </div>
