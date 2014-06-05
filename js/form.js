@@ -1,21 +1,20 @@
 $(document).ready(function() {
       
-      
-      $( "#signup-form" ).fadeIn( "slow", function() {
-      });
 
-      $('#signup-form')[0].reset();
+	$('.accordion').accordion({defaultOpen: 'some_id'}); //some_id section1 in demo
 
-/* clear form after submit 
- * TO DO LIST:
- * 1) If a field isnt entered scroll to that field and highlight 
- * the field prompting user for re-input
- */
-      $("#signup-button").click(function() {
+	$('.square_container .time').timepicker({
+	'showDuration': true,
+	'timeFormat': 'g:ia'
+	});
 
-	      $('#signup-form')[0].reset();
+    $('.square_container .date').datepicker({
+        'format': 'm/d/yyyy',
+        'autoclose': true
+    });
 
-      });
+    // initialize datepair
+    $('.square_container').datepair();
 
 
   
