@@ -276,7 +276,6 @@ body {
 	}
 
 	.custom-header,
-	.custom-header nav,
 	.custom-calendar-full,
 	.fc-calendar-container, 
 	.fc-calendar,
@@ -289,6 +288,16 @@ body {
 		right: auto;
 		height: auto;
 		width: auto;
+	}
+
+	.custom-header nav {
+		top: auto;
+		left: auto;
+		bottom: auto;
+		height: auto;
+		width: auto;
+		position: absolute;
+		right: 30px;
 	}
 
 	.fc-calendar {
@@ -362,19 +371,4 @@ body {
 		font-size: 10px;
 		text-transform: uppercase;
 	}
-}
-
-@media screen and (max-width:960px){
-
-  .custom-header h3 {
-    width: 100%;
-    color: rgba(255, 255, 255, 0.6);
-    font-weight: 300;
-    line-height: 30px;
-    padding-right: 125px;
-    text-align: right;
-    margin-top: 20px;
-   }
-
-
 }
