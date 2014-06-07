@@ -1,14 +1,15 @@
 @charset "UTF-8";
 /* CSS Document */
 body {
-	background-image:url("../img/banner2.jpg");
+	background-image:url("../img/aboutbg.jpg");
+
 
 	}
 a { color: inherit; } 
 
 
 #header{
-	height: 80px;
+	height: 79px;
 	width: 100%;
 	
 	}
@@ -74,19 +75,35 @@ margin-bottom: 30px;
 	width: 60%;
 	margin: 0 auto;	
 	margin-top: 30px;
+
+
 }
 #about{
+	float: left;
 	color: #FFF;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-top: 0px;
 	padding-right:20px;
 	padding-left: 20px;
-	margin-left: auto;
-	margin-right: auto;
 	background-color: #000;
 	background: rgba(255, 255, 255, 0.1);
 	margin-bottom: 30px;
+	
+	width: 100%;
+	
 	}
+#about2{
+	float: left;
+	color: #FFF;
+	padding-top: 0px;
+	padding-bottom: 20px;
+	padding-right:20px;
+	padding-left: 20px;
+	background-color: #000;
+	background: rgba(255, 255, 255, 0.1);
+	margin-bottom: 30px;
+	width: 100%;
+	}
+
 
 #hiredcontainer{
 	width:50%;
