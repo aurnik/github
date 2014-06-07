@@ -1,9 +1,9 @@
 
 
 
-$.getJSON("http://www.google.com/calendar/feeds/p1c3rb7397rqf3jcgfmij6hp08@group.calendar.google.com/public/full?alt=json", function(calendar) {
-    var codropsEvents = {
- 	'MM-26-2014' :  '<span>Aurnik 3PM-5PM</span>',
+//dont ever delete this object or you will have serious problesm && dont add inside document.ready
+var codropsEvents = {
+ 
  };
    
     var arr = calendar["feed"]["entry"];
@@ -18,7 +18,6 @@ $.getJSON("http://www.google.com/calendar/feeds/p1c3rb7397rqf3jcgfmij6hp08@group
             
         }
     }
-});
 
 
-window.test = codropsEvents;
+
