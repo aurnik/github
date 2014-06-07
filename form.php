@@ -6,6 +6,7 @@
     <title>DVC::Redesign</title>	
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
   	<link href="css/form.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   	<script src="js/form.js"></script>
   	<script type="text/javascript" src="js/accordion.js"></script>
@@ -16,30 +17,33 @@
   
 <body>
   <div class="nav">
-  	<div class="link">
+    <div class="nav-mob">
+      -NAV-
+    </div>
+  	<div class="link shrink">
 			<a href="index.html">home</a>
 		</div>
-  	<div class="link">
+  	<div class="link shrink">
 	    <a href="events.html">events</a>
     </div>
-    <div class="link">
-      <a href="form.php" style="color: lightblue;">booking</a>
+    <div class="link shrink">
+      <a href="form.php" class="active-link">booking</a>
     </div>
-    <div class="link">
+    <div class="link shrink">
       <a href="calendar.html">calendar</a>
     </div>
-    <div class="link">
+    <div class="link shrink">
       <a href="media.html">media</a>
     </div>
-    <div class="link">
+    <div class="link shrink">
       <a href="artists.html" >artists</a>
     </div>
-    <div class="link">
+    <div class="link shrink">
       <a href="about.html">about</a>
     </div>
   </div>
   <div id="form_background">
-    <form id="signup-form" style="display:block;" action="formtoemailpro.php" method="post">
+    <form id="signup-form" action="formtoemailpro.php" method="post">
       <div class="accordion" id="section1">Step 1: Contact Information<span></span></div>
         <div class="container">
           <div class="row">

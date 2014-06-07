@@ -73,7 +73,6 @@ body {
 	color: rgba(255,255,255,0.6);
 	font-weight: 300;
 	line-height: 30px;
-	text-align: right;
 	padding-right: 125px;
 }
 
@@ -298,6 +297,7 @@ body {
 		width: auto;
 		position: absolute;
 		right: 30px;
+		display: inline-block;
 	}
 
 	.fc-calendar {

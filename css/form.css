@@ -1,22 +1,10 @@
-html {
-font-family: 'Lato', sans-serif;
-}
-
 body {
 padding-bottom:200px;
 background-image:url('../img/banner2.jpg');
 margin:0;
 padding:0;
-/*font-family: Consolas, Courier New, monospace;
-font-family:BrandonRegular, sans-serif;*/
-
-
 }
 
-a {
-text-decoration: none;
-color: inherit;
-}
 
 #form_background{
 background: none repeat scroll 0% 0% #000;
@@ -30,32 +18,14 @@ padding-top: 3em;
 margin-top: 120px;
 }
 
-.nav {
-position: fixed;
-color: white;
-padding: 30px 0px;
-text-align: center;
-font-weight: 300;
-width: 100%;
-background: rgba(0,0,0,0.5);
-z-index: 1000;
-}
-
-.nav .link {
-display: inline-block;
-text-transform: uppercase;
-padding: 0px 20px;
-}
-
 #signup-form{
 box-sizing: border-box;
-display: none;
+display:block;
 color: #FFF;
 border-radius: 0.3em;
 margin: auto;
 width: 65%;
 }
-
 
 input{
 padding:.8em;
