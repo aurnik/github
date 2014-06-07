@@ -131,6 +131,11 @@
 				display: inline-block;
 				text-transform: uppercase;
 				padding: 0px 20px;
+				overflow: hidden;
+				transition: height 0.4s;
+				-webkit-transition: height 0.4s;
+				-o-transition: height 0.4s;
+				-moz-transition: height 0.4s;
 			}
 
 			#wrapper {
@@ -225,43 +230,61 @@
 			.bolder {
 				font-weight: 300 !important;
 			}
-			.keys {
-				position: fixed;
-				z-index: 2000;
-				top: 100px;
-				right: 20px;
+
+			.nav-mob {
+				display: none;
+				padding: 10px 0px;
+			}
+
+			@media screen and (max-width: 1024px) {
+				.nav {
+					background: black;
+					padding: 0px 0px;
+					position: static;
+				}
+				.nav-mob {
+					display: block;
+				}
+				.nav .link {
+					display: block;
+					padding: 0px;
+					height: auto;
+				}
+				.nav .link.shrink {
+					height: 0px;
+				}
 			}
 		</style>
 	</head>
 	<body>
 		<div class="nav">
-			<div class="link">
+			<div class="nav-mob">
+				Navigation
+			</div>
+			<div class="link shrink">
             	<a href="index.html" style="color: lightblue;">home</a>
 			</div>
-			<div class="link">
+			<div class="link shrink">
 				<a href="events.html">events</a>
             </div>
-            <div class="link">
+            <div class="link shrink">
                 <a href="form.php">booking</a>
             </div>
-            <div class="link">
+            <div class="link shrink">
                 <a href="calendar.html">calendar</a>
             </div>
-            <div class="link">
+            <div class="link shrink">
                 <a href="media.html">media</a>
             </div>
-            <div class="link">
+            <div class="link shrink">
                 <a href="artists.html" >artists</a>
             </div>
-            <div class="link">
+            <div class="link shrink">
                 <a href="about.html">about</a>
             </div>
 		</div>
 		<section style="margin-bottom:-68px;">
 			<div class="full" style="background:#161616">
-				<div class="keys">
-					<img src="./img/arrowkeys.png" style="opacity:0.6"/>
-				</div>
 				<!--div id="wrapper" class="content">
 					<div id="carousel">
 						<img src="img/building1.jpg" alt="building1" width="990" height="400" />
@@ -374,6 +397,11 @@
 				});
 			}
 			
+			$(document).ready(function() {
+				$(".nav-mob").click(function() {
+					$(".nav .link").toggleClass("shrink");
+				});
+			});
 		</script>
 	</body>
 </html>
