@@ -60,10 +60,10 @@ body {
 		background: black;
 		padding: 0px 0px;
 		position: static;
-		font-size: 50px;
 	}
 	.nav-mob {
 		display: block;
+		font-size: 1em;
 	}
 	.nav .link {
 		display: block;
