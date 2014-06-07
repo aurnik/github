@@ -1,9 +1,10 @@
- var codropsEvents = {
- };
+
 
 
 $.getJSON("http://www.google.com/calendar/feeds/p1c3rb7397rqf3jcgfmij6hp08@group.calendar.google.com/public/full?alt=json", function(calendar) {
-
+    var codropsEvents = {
+ 	'MM-26-2014' :  '<span>Aurnik 3PM-5PM</span>',
+ };
    
     var arr = calendar["feed"]["entry"];
     window.cal = arr;
@@ -16,7 +17,7 @@ $.getJSON("http://www.google.com/calendar/feeds/p1c3rb7397rqf3jcgfmij6hp08@group
             codropsEvents[date] = '<span>'+title+'</span>';
             
         }
-    };
+    }
 });
 
 
