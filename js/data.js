@@ -1,5 +1,4 @@
  var codropsEvents = {
- 	'MM-26-2014' :  '<span>Aurnik 3PM-5PM</span>',
  };
 
 

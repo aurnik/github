@@ -12,10 +12,11 @@
     <style type="text/css">
       .flip {
         -webkit-perspective: 800;
-         width: 200px;
-         height: 200px;
+         width: 250px;
+         height: 250px;
           position: relative;
-          margin: 50px auto;
+          margin: 10px;
+          display: inline-block;
       }
       .flip .card.flipped {
         -webkit-transform: rotatey(-180deg);
@@ -36,20 +37,42 @@
           font-family: "Lato", sans-serif;
           font-size: 10px;
           text-align: center;
-          line-height: 200px;
       }
       .flip .card .front {
         background-position: center;
-        background-size: 100% auto;
+        background-size: auto 100%;
         position: absolute;
         z-index: 1;
           color: white;
       }
       .flip .card .back {
         -webkit-transform: rotatey(-180deg);
-          background: blue;
-          background: white;
-          color: black;
+          background: black;
+          color: white;
+      }
+      .card-content {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+      }
+      .card-content .name {
+        font-size: 18px;
+        font-weight: 300;
+        text-transform: uppercase;
+      }
+      .card-content .date {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 14px;
+        color: rgba(255,255,255,0.6);
+      }
+      .card-content .desc {
+        margin: 20px 15px;
+        font-size: 13px;
+        line-height: 18px;
       }
     </style>
   </head>
@@ -59,7 +82,7 @@
         <a href="index.html">home</a>
       </div>
       <div class="link">
-        <a href="events.html">events</a>
+        <a href="events.html" style="color: lightblue;">events</a>
       </div>
       <div class="link">
         <a href="form.php">booking</a>
@@ -78,8 +101,8 @@
       </div>
     </div>
 
-    <div class="container" id="events">
-      
+    <div class="container">
+      <div id="events" style="max-width:1200px;margin:auto"></div>
     </div>
     
     <script type="text/javascript">
@@ -91,7 +114,10 @@
       query.find({
         success: function(results) {
           // Do something with the returned Parse.Object values
-          for (var i = 0; i < results.length; i++) { 
+          results.sort(function(o1,o2){
+            return new Date(o2.get('date')) - new Date(o1.get('date'));
+          });
+          for (var i = 0; i < 11; i++) { 
             var object = results[i];
 
             //create divs for flip card
@@ -115,7 +141,22 @@
             var picUrl = picObj["_url"];
 
             front.style.backgroundImage = "url(" + picUrl + ")";
-            back.innerHTML = object.get('name') + ' - ' + getDate(object.get('date'));
+
+            var cardCont = document.createElement("DIV");
+            cardCont.className = "card-content";
+            var cardName = document.createElement("DIV");
+            cardName.className = "name";
+            cardName.innerHTML = object.get('name');
+            var cardDate = document.createElement("DIV");
+            cardDate.className = "date";
+            cardDate.innerHTML = getDate(object.get('date'));
+            var cardDesc = document.createElement("DIV");
+            cardDesc.className = "desc";
+            cardDesc.innerHTML = object.get('desc');
+            cardCont.appendChild(cardName);
+            cardCont.appendChild(cardDate);
+            cardCont.appendChild(cardDesc);
+            back.appendChild(cardCont);
 
             var cont = document.getElementById("events");
             cont.appendChild(flip);

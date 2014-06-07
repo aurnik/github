@@ -2,6 +2,7 @@
 /* CSS Document */
 body {
 	background-image:url("../img/banner2.jpg");
+
 	}
 a { color: inherit; } 
 
@@ -19,8 +20,32 @@ a { color: inherit; }
 	
 
 #slider{
+	background-image: url('../img/about-banner2.jpg');
+	background-position: center;
+	height: 500px;
+	width: 100%;
+	text-align: center;
+	color: #FFF;
 	
+
 	}
+
+#slider2{
+	margin-left: auto;
+	margin-right: auto;
+	height: 80px;
+	padding-top: 150px;
+	font-weight: 300;
+				font-size: 80px;
+				margin-bottom: 30px;
+}
+
+.slider2 h1 {
+
+font-weight: 300;
+font-size: 80px;
+margin-bottom: 30px;
+}
 	
 .bg {
 	width: 100%;
@@ -35,9 +60,8 @@ a { color: inherit; }
 	height:120px;
 	width:80%;
 	margin: 0 auto;
-	border:1px solid #ccc;
 	font:16px/26px Georgia, Garamond, Serif;
-	overflow:auto;
+	
 	
 	
 }
@@ -47,29 +71,36 @@ a { color: inherit; }
 }
 	
 #aboutcontainer{
-
+	width: 60%;
 	margin: 0 auto;	
 	margin-top: 30px;
 }
 #about{
-	float: left;
 	color: #FFF;
 	padding-top: 20px;
-	padding-bottom: 50px;
-	padding-left:50px;
-	padding-right:50px;
+	padding-bottom: 20px;
+	padding-right:20px;
+	padding-left: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #000;
+	background: rgba(255, 255, 255, 0.1);
+	margin-bottom: 30px;
 	}
+
 #hiredcontainer{
-	width:80%;
+	width:50%;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
+	color: #FFF;
+	height: 310px;
 }
 
 #hired{	
-	margin-top: 50px;
 	float: left;
 	margin-right: 10px;
+	float: left;
 }
 
 #hired2{ 
@@ -79,9 +110,6 @@ a { color: inherit; }
 	max-height: 150px; 
 	width: 300px;
 	display: inline-block;
-	margin-top: 50px;
-    overflow: auto; 
-	border: 1px solid white; 
 	}
 td { border-bottom: 1px solid black; }
 
@@ -145,10 +173,57 @@ td { border-bottom: 1px solid black; }
     background: linear-gradient(top,  #d3d3d3 0%,#8a8a8a 100%); /* W3C */
 }
 	
-#signup {
+#bookingbutton {
 	margin-top: 10px;
-	width: 300px;
-	height: 80px;
-	float: right;	
+	width: 100%;
+	height: 80px;	
+	float: left;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+#book {
+text-transform: uppercase;
+border: 3px solid white;
+height: 40px;
+width: 180px;
+margin: auto;
+cursor: pointer;
+margin-bottom: 50px;
+vertical-align: middle;
+color: #FFF;
+padding-bottom: 11px;
+}
+#book:hover {
+text-transform: uppercase;
+border: 3px solid white;
+height: 40px;
+width: 180px;
+margin: auto;
+cursor: pointer;
+background-color: rgba(1,64,255,.7);
+color: #FFF;
+margin-bottom: 50px;
 
+
+}
+}
+#book p {
+font-size: 20px;
+font-weight: 700;
+letter-spacing: 2px;
+margin: 8px 0px;
+cursor: pointer;
+}
+#fbook {
+	background-image: url(../img/fbook.png);
+	width:42px;
+	height:42px;
+	opacity:0.4;
+	}
+#fbook:hover{
+	background-image:url(../img/fbookblue.png);
+	width:42px;
+	height:42px;
+	opacity:0.7;
 }

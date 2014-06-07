@@ -140,7 +140,7 @@ Enter the web address of the page that you would like the visitor to be automati
 
 */
 
-$redirect_url = "/dvc/index.html";
+$redirect_url = "./index.html";
 
 /*
 
@@ -396,7 +396,7 @@ By default the From: address shown in the autoresponse email will be the email a
 
 */
 
-$autoresponder_from = "";
+$autoresponder_from = "bookingform@dvc.site";
 
 /*
 
@@ -404,7 +404,7 @@ Enter a subject line for the autoresponse email below.  Keep it between the quot
 
 */
 
-$autoresponder_subject = "";
+$autoresponder_subject = "[DVC] New Booking Request";
 
 /*
 
@@ -412,7 +412,7 @@ Enter a message below, between the quotes, that will be shown at the top of the 
 
 */
 
-$autoresponder_header_message = "";
+$autoresponder_header_message = "This booking request was generated using the booking form on the website.";
 
 /*
 
@@ -420,7 +420,7 @@ Enter a message (or signature) below, between the quotes, that will be shown at 
 
 */
 
-$autoresponder_footer_message = "";
+$autoresponder_footer_message = "DVC Booking Monster";
 
 /*
 

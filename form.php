@@ -105,19 +105,19 @@
         <div class="row">
           <div class="short_row check1">
       		  <label>Top-40</label>
-      	  	<input type="checkbox" name="genre" />
+      	  	<input type="checkbox" name="genre top40" />
           </div>
           <div class="short_row check1">
       		  <label>Hip-Hop</label>
-      	    <input type="checkbox" name="genre" />
+      	    <input type="checkbox" name="genre hiphop" />
           </div>
           <div class="short_row check1">
       		  <label>Dubstep</label>
-      		  <input type="checkbox" name="genre" />
+      		  <input type="checkbox" name="genre dubstep" />
           </div>
       		<div class="short_row check1">
       		  <label>Other</label>
-      	    <input type="checkbox" name="genre" />
+      	    <input type="checkbox" name="genre other" />
           </div> 
       </div>
     </div>

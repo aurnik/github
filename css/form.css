@@ -27,7 +27,7 @@ border-radius: 0.3em;
 left: 28%;
 padding-bottom: 2.5em;
 padding-top: 3em;
-margin: 8em auto;
+margin-top: 120px;
 }
 
 .nav {
@@ -583,4 +583,46 @@ cursor: default;
 .ui-timepicker-list li.ui-timepicker-disabled:hover,
 .ui-timepicker-list li.ui-timepicker-selected.ui-timepicker-disabled {
 background: #f2f2f2;
+}
+
+@media (max-width: 1172px){
+
+	#form_background {
+    background: none repeat scroll 0% 0% #000;
+    opacity: 0.8;
+    width: 55%;
+    position: absolute;
+    border-radius: 0.3em;
+    left: 28%;
+    padding-bottom: 2.5em;
+    padding-top: 3em;
+    margin-top: 120px;
+    left: 22%;
+    }
+}
+
+@media (max-width: 955px){
+
+	#form_background {
+    background: none repeat scroll 0% 0% #000;
+    opacity: 0.8;
+    position: absolute;
+    border-radius: 0.3em;
+    padding-bottom: 2.5em;
+    padding-top: 3em;
+    width: 65%;
+    margin-top: 120px;
+    left: 17%;
+	}
+
+	
+	#signup-form {
+    box-sizing: border-box;
+    display: none;
+    color: #FFF;
+    border-radius: 0.3em;
+    margin: auto;
+    width: 78%;
+	}
+
 }
