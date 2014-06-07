@@ -131,10 +131,12 @@ body {
 .custom-header nav span:last-child {
 	margin-left: 10px;
 	border-radius: 3px;
+	padding-left: 5px;
+    padding-right: 8px;
 }
 
 .custom-header nav span.custom-current:before {
-	content: 'Current Day';
+	content: 'Today';
 	font-size:12px;
 }
 
