@@ -5,7 +5,6 @@ margin:0;
 padding:0;
 }
 
-
 #form_background{
 background: none repeat scroll 0% 0% #000;
 opacity: 0.8;
@@ -15,7 +14,7 @@ border-radius: 0.3em;
 left: 28%;
 padding-bottom: 2.5em;
 padding-top: 3em;
-margin-top: 120px;
+margin-top: 105px;
 }
 
 #signup-form{
@@ -595,4 +594,15 @@ background: #f2f2f2;
     width: 78%;
 	}
 
+}
+.title {
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    max-width: 1100px;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: -30px;
+    font-size: 40px;
+    font-weight: 300;
 }

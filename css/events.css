@@ -86,3 +86,13 @@ a {
   font-size: 13px;
   line-height: 18px;
 }
+.title {
+  color: white;
+  text-transform: uppercase;
+  text-align: left;
+  max-width: 1100px;
+  margin: auto;
+  font-size: 60px;
+  font-weight: 300;
+  border-bottom: 2px solid white;
+}

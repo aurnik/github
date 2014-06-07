@@ -17,8 +17,9 @@
   
 <body>
   <div class="nav">
-    <div class="nav-mob">
-      -NAV-
+    <div class="dvc"></div>
+<div class="nav-mob">
+      -MENU-
     </div>
   	<div class="link shrink">
 			<a href="index.html">home</a>
@@ -42,7 +43,9 @@
       <a href="about.html">about</a>
     </div>
   </div>
+
   <div id="form_background">
+    <div class="title">booking</div>
     <form id="signup-form" action="formtoemailpro.php" method="post">
       <div class="accordion" id="section1">Step 1: Contact Information<span></span></div>
         <div class="container">
