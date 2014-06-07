@@ -10,8 +10,10 @@ $(document).ready(function() {
     
   })
   
-  
-
+//for crunch navigation
+$(".nav-mob").click(function() {
+	$(".nav .link").toggleClass("shrink");
+});
 
   
 });

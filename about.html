@@ -6,261 +6,46 @@
 <meta http-equiv='Content-Type' content='text/html; charset=ISO-8859-1'>
 <link rel='stylesheet' href='css/about.css' type='text/css' charset='utf-8'>
 <link rel="stylesheet" href="css/javascript-rollovers.css">
+<link href="css/style.css" rel="stylesheet">
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/mootools/1.2.4/mootools.js"></script>
 <script type="text/javascript" src="js/javascript-rollovers.js"></script>
 <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
-		<script src="http://code.jquery.com/jquery-latest.min.js"
-        type="text/javascript"></script>
-        <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.5.1/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.5.1/fotorama.js"></script> <!-- 16 KB -->
-		<script type="text/javascript" src="./js/jquery.panelSnap.js"></script>
-		<style type="text/css">
-			a {
-				text-decoration: none;
-				color: inherit;
-			}
-			html, body {
-				margin: 0px;
-				padding: 0px;
-				font-family: 'Lato', sans-serif;
-			}
-			body {
-				height: 100%;
-			}
-			.full {
-				width: 100%;
-				height: 100%;
-				background-position: center;
-				background-size: 100% auto;			
-			}
-			.banner {
-				background-image: url("./img/banner.jpg");	
-			}
-			.join {
-				background-image: url("./img/banner2.jpg");
-			}
-			.full .content {
-				position: relative;
-				top: 50%;
-				transform: translateY(-50%);
-				-webkit-transform: translateY(-50%);
-				-o-transform: translateY(-50%);
-				-moz-transform: translateY(-50%);
-				margin: auto;
-			}
-			.banner .content {
-				height: 400px;
-				max-width: 800px;
-				color: white;
-				text-align: center;
-				/*background-color: rgba(255,255,255,0.1);*/
-			}
-			.banner h1 {
-				font-weight: 300;
-				font-size: 80px;
-				margin-bottom: 30px;
-			}
-			.banner p {
-				font-weight: 100;
-				font-size: 38px;
-				margin: 0px;
-			}
-			.banner .book {
-				text-transform: uppercase;
-				border: 3px solid white;
-				height: 40px;
-				width: 180px;
-				margin: auto;
-				margin-top: 50px;
-				cursor: pointer;
-			}
-			.banner .book:hover {
-				background: white;
-			}
-			.banner .book p {
-				font-size: 20px;
-				font-weight: 700;
-				letter-spacing: 2px;
-				margin: 8px 0px;
-				cursor: pointer;
-			}
-			.banner .book:hover p {
-				color: black;
-			}
-			.join {
-				background-color: #222;
-				color: white;
-			}
-			.join .content {
-				text-align: center;
-			}
-			.row {
-				margin: auto;
-			}
-			.row .unit {
-				display: inline-block;
-				max-width: 50%;
-			}
-			@media screen and (max-width: 900px) {
-				.join {
-					padding-top: 30px;
-				}
-				.join .row .unit {
-					margin: auto;
-					display: block;
-				}
-			}
-			.join h1 {
-				font-weight: 100;
-				font-size: 30px;
-			}
-			.join p {
-				font-weight: 100;
-				font-size: 20px;
-				letter-spacing: 1px;
-			}
-			.mapinfo {
-				text-align: left;
-				width: 400px;
-				padding-left: 20px;
-				vertical-align: top;
-			}
-			.nav {
-				position: fixed;
-				color: white;
-				padding: 30px 0px;
-				text-align: center;
-				font-weight: 300;
-				width: 100%;
-				background: rgba(0,0,0,0.5);
-				z-index: 1000;
-			}
-			.nav .link {
-				display: inline-block;
-				text-transform: uppercase;
-				padding: 0px 20px;
-			}
-
-			#wrapper {
-				background-color: #fff;
-				width: 100%;
-				height: 400px;
-				/*margin-top: -225px;*/
-				overflow: hidden;
-				/*position: absolute;*/
-				top: 50%;
-				left: 0;
-			}
-			#carousel img {
-				display: block;
-				float: left;
-			}
-			#prev, #next {
-				background-color: rgba(255, 255, 255, 0.7);
-				display: block;
-				height: 400px;
-				width: 50%;
-				top: 0;
-				position: absolute;
-			}
-			#prev:hover, #next:hover {
-				background-color: #fff;
-				background-color: rgba(255, 255, 255, 0.8);
-			}
-			#prev {
-				left: -495px;
-			}
-			#next {
-				right: -495px;
-			}
-			#pager {
-				position: absolute;
-				bottom: 10px;
-				width: 100%;
-				text-align: center;
-			}
-			#pager a {
-				border: 2px solid #fff;
-				border-radius: 10px;
-				display: inline-block;
-				width: 10px;
-				height: 10px;
-				margin: 0 5px 0 0;
-			}
-			#pager a:hover {
-				background-color: rgba(255, 255, 255, 0.5);
-			}
-			#pager a span {
-				display: none;
-			}
-			#pager a.selected {
-				background-color: #fff;
-			}
-			.fotorama__nav-wrap {
-				position: relative;
-				top: -80px;
-			}
-			.fotorama__nav__shaft {
-				opacity: 0.5;
-				transition: opacity 0.15s linear !important;
-				-webkit-transition: opacity 0.15s linear !important;
-				-o-transition: opacity 0.15s linear !important;
-				-moz-transition: opacity 0.15s linear !important;
-			}
-			.fotorama__nav__shaft:hover {
-				opacity: 1;
-			}
-			.fotorama__html .info {
-				padding: 100px 80px;
-				height: 100%;
-				background: rgba(0,0,0,0.2);
-			}
-			.fotorama__html .info .title {
-				color: white;
-				font-size: 60px;
-				text-transform: uppercase;
-				font-weight: 100;
-			}
-			.fotorama__stage__shaft {
-				margin: 0px -2px;
-			}
-			.fotorama__stage {
-				height: 100% !important;
-			}
-			/*.fotorama__stage__frame {
-				margin-right: -4px;
-			}*/
-			.bolder {
-				font-weight: 300 !important;
-			}
-		</style>
+<script src="http://code.jquery.com/jquery-latest.min.js"
+type="text/javascript"></script>
+<link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.5.1/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.5.1/fotorama.js"></script> <!-- 16 KB -->
+<script type="text/javascript" src="./js/jquery.panelSnap.js"></script>
 
 <title>Welcome to DVC</title>
 </head>
 <body>
-<div class="nav">
-	<div class="link">
-				<a href="index.html">home</a>
-			</div>
-			<div class="link">
-				<a href="events.html">events</a>
-			</div>
-			<div class="link">
-				<a href="form.php">booking</a>
-			</div>
-			<div class="link">
-				<a href="calendar.html">calendar</a>
-			</div>
-			<div class="link">
-				<a href="media.html">media</a>
-			</div>
-			<div class="link">
-				<a href="artists.html">artists</a>
-			</div>
-			<div class="link" style="color: lightblue;">
-				about
-			</div>
-		</div>
+    <div class="nav">
+      <div class="dvc"></div>
+<div class="nav-mob">
+        -MENU-
+      </div>
+      <div class="link shrink">
+        <a href="index.html">home</a>
+      </div>
+      <div class="link shrink">
+        <a href="events.html" >events</a>
+      </div>
+      <div class="link shrink">
+        <a href="form.php">booking</a>
+      </div>
+      <div class="link shrink">
+        <a href="calendar.html">calendar</a>
+      </div>
+      <div class="link shrink">
+        <a href="media.html">media</a>
+      </div>
+      <div class="link shrink">
+        <a href="artists.html" >artists</a>
+      </div>
+      <div class="link shrink">
+        <a href="about.html" class="active-link">about</a>
+      </div>
+    </div>
 <div id="header">
 
 </div>
@@ -318,6 +103,12 @@ Within a year, DVC started to throw more events and seminars for its members as 
 <p>The DeeJays and Vinylphiles Club at UCSD, or DVC, was created as a source of support and information for electronic music and all forms of its expression. DVC is dedicated to training members in the arts of DeeJaying, mixing, music production, and promotion. Members are able to experience almost every level of DJ culture by participation in organizing events on campus.  These events serve not only to display members' talent and dedication, but also to entertain, educate, and interact with an audience - the students of UCSD. DVC's main focus is, and will always be, the enjoyment of music. This defines us, evolves us, and transcends us. We only hope that through our energy, enthusiasm, and effort that those in attendance will understand and respect this principle. We exist only of and for the music, so come listen and dance: bring some life into this sleepy little eucalyptus grove!</p><br />
 </div>
 </div>
-
+<script type="text/javascript">
+$(document).ready(function() {
+		$(".nav-mob").click(function() {
+			$(".nav .link").toggleClass("shrink");
+		});
+});
+</script>
 </body>
 </html>

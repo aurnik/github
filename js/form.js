@@ -13,11 +13,11 @@ $(document).ready(function() {
         'autoclose': true
     });
 
-    // initialize datepair
-    $('.square_container').datepair();
-
-
-
+   
+    //for crunch navigation
+    $(".nav-mob").click(function() {
+        $(".nav .link").toggleClass("shrink");
+    });
 
   
 });

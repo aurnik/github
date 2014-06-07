@@ -55,25 +55,11 @@
 </div>
 
 
-
-  
-
 	<script src="./js/isotope.pkgd.min.js"></script>
 	<script type="text/javascript">
 
 	var $container = $('#iso');
-	// init
-	/*$container.isotope({
-	  // options
-	  itemSelector: '.item',
-	  layoutMode: 'masonry',
-	  getSortData: {},
-	  sortBy: 'random',
-	  masonry: {
-		  columnWidth: 50,
-		  gutter: 10
-		}
-	});*/
+
 
 	$('#filters').on( 'click', 'button', function() {
 	  var filterValue = $(this).attr('data-filter');
@@ -113,15 +99,14 @@
 
 		$container.isotope( 'insert', elems );
 
-		/* RANDOMIZER
-		var cards = $(".item");
-		for(var i = 0; i < cards.length; i++){
-		    var target = Math.floor(Math.random() * cards.length -1) + 1;
-		    var target2 = Math.floor(Math.random() * cards.length -1) +1;
-		    cards.eq(target).before(cards.eq(target2));
-		}*/
-
+	    //on document loaded
 		$(document).ready(function() {
+
+        	//for navigation shrink
+			$(".nav-mob").click(function() {
+				$(".nav .link").toggleClass("shrink");
+			});
+
 			$('.popup-gallery').magnificPopup({
 				delegate: 'a',
 				type: 'image',

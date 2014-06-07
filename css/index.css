@@ -4,6 +4,9 @@
 .join {
 	background-image: url("../img/banner2.jpg");
 }
+.link a:hover{
+	color:lightblue;
+}
 .banner .content {
 	height: 400px;
 	max-width: 800px;

@@ -20,6 +20,9 @@
   display: block;
   clear: both;
 }
+.link a:hover{
+	color:lightblue;
+}
 
 /* ---- .item ---- */
 

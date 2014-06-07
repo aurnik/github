@@ -8,11 +8,11 @@
   	<link href="css/form.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  	<script src="js/form.js"></script>
+  	<script type="text/javascript" src="js/form.js"></script>
   	<script type="text/javascript" src="js/accordion.js"></script>
   	<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
     <script type="text/javascript" src="js/jquery.timepicker.js"></script>
-  	<script type="text/javascript" src="js/datepair.js"></script>
+  	<script type="text/javascript" src="js/datepicker.js"></script>
   </head>
   
 <body>

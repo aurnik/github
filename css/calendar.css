@@ -12,7 +12,9 @@ a {
 text-decoration: none;
 color: inherit;
 }
-
+.link a:hover{
+	color:lightblue;
+}
 .no-touch .fc-calendar .fc-row > div:hover {
 /*background: rgba(202,202,202,0.7);*/
 background:rgba(0, 0, 0, 0.5);
