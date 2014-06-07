@@ -63,12 +63,12 @@ body {
 	}
 	.nav-mob {
 		display: block;
-		font-size: 5em;
+		font-size: 7em;
 	}
 	.nav .link {
 		display: block;
 		padding: 0px;
-		font-size: 30px;
+		font-size: 6em;
 		height: auto;
 	}
 	.nav .link.shrink {
